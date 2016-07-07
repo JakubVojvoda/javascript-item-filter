@@ -1,0 +1,176 @@
+<!--
+ * Simple item filter in JavaScript
+ * author: Jakub Vojvoda, vojvoda@swdeveloper.sk
+ * 2015
+ * 
+ * file: demo.html 
+ * -  demonstration of the filter functionality
+ *
+ -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">   
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Projekt WAP (Internetové aplikace).">
+  <meta name="author" content="Jakub Vojvoda">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="filter.js"></script>
+  <title>Demo: Výběr zboží</title>
+</head>
+<body>
+  <div id="book">
+    <div class="item">
+      <img src="demo/1984.jpeg" alt="1984" height="173" width="114">
+      <h2 class="title">1984</h2>
+      <span class="author">
+        <a href="#">George Orwell</a>
+      </span>
+      <span class="genre">novel</span>
+      <a class="buy-button" href="#">
+        <span class="price">9.19$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <div class="item">
+      <img src="demo/BraveNewWorld.jpeg" alt="" height="173" width="114">
+      <h2 class="title">Brave New World</h2>
+      <span class="author" id="aldous">
+        <a href="#">Aldous Huxley</a>
+      </span>
+      <span class="genre">novel</span>
+      <a class="buy-button" href="#">
+        <span class="price">8.42$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <div class="item">
+      <img src="demo/AnimalFarm.jpeg" alt="" height="173" width="114">
+      <h2 class="title">Animal Farm</h2>
+      <span class="author">
+        <a href="#">George Orwell</a>
+      </span>
+      <span class="genre">novella</span>
+      <a class="buy-button" href="#">
+        <span class="price">14.23$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <div class="item">
+      <img src="demo/LesFleursDuMal.jpeg" alt="" height="173" width="114">
+      <h2 class="title">Les Fleurs du mal</h2>
+      <span class="author">
+        <a href="#">Charles Pierre Baudelaire</a>
+      </span>
+      <span class="genre">poetry</span>
+      <a class="buy-button" href="#">
+        <span class="price">11.66$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <div class="item">
+      <img src="demo/WarAndPeace.jpeg" alt="" height="173" width="114">
+      <h2 class="title">War and Peace</h2>
+      <span class="author">
+        <a href="#">Lev Nikolayevich Tolstoy</a>
+      </span>
+      <span class="genre">novel</span>
+      <a class="buy-button" href="#">
+        <span class="price">8.85$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <div class="item">
+      <img src="demo/ToKillAMockingbird.jpeg" alt="" height="173" width="114">
+      <h2 class="title">To Kill a Mockingbird</h2>
+      <span class="author">
+        <a href="#">Harper Lee</a>
+      </span>
+      <span class="genre">novel</span>
+      <a class="buy-button" href="#">
+        <span class="price">6.56$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <div class="item">
+      <img src="demo/TheGodfather.jpeg" alt="" height="173" width="114">
+      <h2 class="title">The Godfather</h2>
+      <span class="author">
+        <a href="#">Mario Gianluigi Puzo</a>
+      </span>
+      <span class="genre">novel</span>
+      <a class="buy-button" href="#">
+        <span class="price">17.56$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <div class="item">
+      <img src="demo/CrimeAndPunishment.jpeg" alt="" height="173" width="114">
+      <h2 class="title">Crime and Punishment</h2>
+      <span class="author">
+        <a href="#">Fyodor Dostoyevsky</a>
+      </span>
+      <span class="genre">novel</span>
+      <a class="buy-button" href="#">
+        <span class="price">15.39$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <div class="item">
+      <img src="demo/TheBrothersKaramazov.jpeg" alt="" height="173" width="114">
+      <h2 class="title">The Brothers Karamazov</h2>
+      <span class="author">
+        <a href="#">Fyodor Dostoyevsky</a>
+      </span>
+      <span class="genre">novel</span>
+      <a class="buy-button" href="#">
+        <span class="price">19.47$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <div class="item">
+      <img src="demo/ForWhomTheBellTolls.jpeg" alt="" height="173" width="114">
+      <h2 class="title">For Whom the Bell Tolls</h2>
+      <span class="author">
+        <a href="#">Ernest Hemingway</a>
+      </span>
+      <span class="genre">novel</span>
+      <a class="buy-button" href="#">
+        <span class="price">23.82$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <div class="item">
+      <img src="demo/TheOldManAndTheSea.jpeg" alt="" height="173" width="114">
+      <h2 class="title">The Old Man and the Sea</h2>
+      <span class="author">
+        <a href="#">Ernest Hemingway</a>
+      </span>
+      <span class="genre">novella</span>
+      <a class="buy-button" href="#">
+        <span class="price">6.78$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <div class="item">
+      <img src="demo/TheLittlePrince.jpeg" alt="" height="173" width="114">
+      <h2 class="title">The Little Prince</h2>
+      <span class="author">
+        <a href="#">Antoine de Saint-Exupéry</a>
+      </span>
+      <span class="genre">novella</span>
+      <a class="buy-button" href="#">
+        <span class="price">8.24$</span>
+        <span class="buy">Buy now</span>
+      </a>
+    </div>
+    <br><br>
+  </div>
+  <script type="text/javascript">
+    var x = [{name:"title", type:"str"}, {name:"author", type:"str"}, {name:"price", type:"num"}, {name:"genre", type:"enum"}];
+    filterList(x);
+    styleForm();
+  </script>
+</body>
+</html>
